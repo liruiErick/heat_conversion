@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食物转换器</title>
+	<link rel="stylesheet" type="text/css" href="css/light7.css"/>
+	<link rel="stylesheet" type="text/css" href="css/icon/iconfont.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+	<!--set-condition-->
+	<div class="page page-current" id='router'>
+		<img class="shelter" src="img/router/shelter.png" alt="shelter"/>
+	    <div class="logo">
+	    	<img src="img/router/logo.png" alt="logo"/>
+	    </div>
+	    <div class="person_data">
+	    	<span>个人信息</span>
+	    </div>
+	    <div class="content-padded">
+			<div class="content" id="content1">
+				<p style="height: 30px;line-height: 30px;">
+		          <a href="#" class="open-popover" data-popover=".popover">体重(kg)</a>			
+				</p>
+			</div>
+		</div>
+	    <div class="dot">
+	    	<img src="img/router/dot.png"/>
+	    </div>
+	    <ul class="meal clearfix">
+	    	<li class="breakfast" id="1">
+	    		<img src="img/router/breakfast_before.png"/>
+	    	</li>
+	    	<li class="lunch" id="2">
+	    		<img src="img/router/lunch_before.png"/>
+	    	</li>
+	    	<li class="dinner" id="3">
+	    		<img src="img/router/dinner_before.png"/>
+	    	</li>
+	    	<li class="add_food" id="4">
+	    		<img src="img/router/add_food_before.png"/>
+	    	</li>
+	    </ul>
+	    <div class="sumibt">
+	    	<a href="#" id="check" class="button button-danger">提交</a>
+	    </div>
+	    <div class="vege">
+		  <img src="img/router/vege.png"/>
+	    </div>
+	    <div class="back_background">
+	    	<img src="img/router/back.png"/>
+	    </div>
+	</div>
+	<!--display-choose-type-->
+	<div class="page" id='router2'>
+	  <header class="bar bar-nav clearfix">
+	    <a class="button button-link button-nav pull-left back" href="javascript:void(0)">
+	      <span class="icon icon-left"></span>
+	                    返回  
+	    </a>
+	    <ul class="wrap">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+		    <li class="choosed">
+		    	<a href="#"><img src=""/></a>
+		    </li>
+		    <li class="meal_result">
+		    	<a href="#"><img src="img/choosed_result_before.png"/></a>
+		    </li>
+		</ul>   
+	  </header>
+	  <div id="content2" class="content">
+	    <div class="content-block">
+	    	<ul>
+	    		<li class="line1">
+		    		<span class="vegetable" dataType="0">
+		    	 		<a href="javascript:void(0)"><img src="img/router2/vegetables.png" food_type="蔬菜"/></a>
+		    	 	</span>
+		    	 	<span class="bean_products" dataType="1">
+		    	 		<a href="javascript:void(0)"><img src="img/router2/ruzhiping.png" food_type="乳制品"/></a>
+		    	 	</span>	
+	    		</li>
+	    		<li class="line1">
+	    			<span class="meat" dataType="2">
+	    	 		    <a href="javascript:void(0)"><img src="img/router2/roulei.png" food_type="肉类"/></a>
+		    	 	</span>
+		    	 	<span class="drink" dataType="3">
+		    	 		<a href="javascript:void(0)"><img src="img/router2/yinliao.png" food_type="饮料"/></a>
+		    	 	</span>
+	    		</li>
+	    		<li class="line1">
+	    			<span class="fruit" dataType="4">
+	    	 		    <a href="javascript:void(0)"><img src="img/router2/fruit.png" food_type="水果"/></a>
+		    	 	</span>
+		    	 	<span class="snack" dataType="5">
+		    	 		<a href="javascript:void(0)"><img src="img/router2/xiaochi.png" food_type="小吃"/></a>
+		    	 	</span>
+	    		</li>
+	    		<li class="line1">
+	    			<span class="fastfood" dataType="6">
+	    	 		    <a href="javascript:void(0)"><img src="img/router2/fastfood.png" food_type="快餐"/></a>
+		    	 	</span>
+		    	 	<span class="zhushi"  dataType="7">
+		    	 		<a href="javascript:void(0)"><img src="img/router2/zhushitu.png" food_type="主食"/></a>
+		    	 	</span>
+	    		</li>
+	    	</ul>
+	    </div>
+	  </div>
+	</div>
+	<!--display--food-->
+	<div class="page" id='router3'>
+	  <header class="bar bar-nav clearfix" style="text-align: center;">
+	    <a class="button button-link button-nav pull-left back" href="#router2">
+	      <span class="icon icon-left"></span>
+	                     返回
+	    </a>
+	    <ul class="wrap">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+		    <li class="choosed">
+		    	<a href="#"><img src=""/></a>
+		    </li>
+		    <li class="meal_result" id="choosed">
+		    	<a href="#"><img src="img/choosed_result_before.png"/></a>
+		    </li>
+		</ul>
+	  </header>
+	  <div id="content3" class="content">
+           <div class="buttons-tab">
+		    <a href="javascript:void(0)" dataType="0" class="tab-link button" style="padding: 0;padding-right: 5px;">蔬菜</a>
+		    <a href="javascript:void(0)" dataType="1" class="tab-link button" style="padding: 0;padding-right: 5px;">乳制品</a>
+		    <a href="javascript:void(0)" dataType="2" class="tab-link button" style="padding: 0">肉类</a>
+		    <a href="javascript:void(0)" dataType="3" class="tab-link button" style="padding: 0">饮料</a>
+		    <a href="javascript:void(0)" dataType="4" class="tab-link button" style="padding: 0">水果</a>
+		    <a href="javascript:void(0)" dataType="5" class="tab-link button" style="padding: 0">小吃</a>
+		    <a href="javascript:void(0)" dataType="6" class="tab-link button" style="padding: 0">快餐</a>
+		    <a href="javascript:void(0)" dataType="7" class="tab-link button" style="padding: 0">主食</a>
+		  </div>
+		  <div class="content-block" style="margin: 0;padding: 0;margin-top: 5%;">
+		    <div class="tabs">
+		      <div id="tab1" class="tab active">
+				  <div class="list-block media-list" style="margin: 0;">
+				    <ul id="food_category" style="border: none;">
+				      
+				    </ul>
+				  </div>
+		      </div>
+		    </div>
+		  </div>	  	 
+	  </div>
+	</div>
+	<!--display-choose-list-->
+	<div class="page" id='router4'>
+	  <header class="bar bar-nav clearfix">
+	    <a class="button button-link button-nav pull-left back" href="#router3">
+	      <span class="icon icon-left"></span>
+	                     返回
+	    </a>
+	    <ul class="wrap">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+		    <li class="choosed">
+		    	<a href="#"><img src=""/></a>
+		    </li>
+		    <li class="meal_result" style="background: #fef8cb;">
+		    	<a href="#"><img src="img/choosed_result_before.png"/></a>
+		    </li>
+		</ul>
+	  </header>
+	  <div id="content4" class="content" style="top:2rem;">
+	  	<div class="content_body clearfix" id="content_body_vegetable" style="display: none;">
+            <div class="content-block-title" style="text-align: left;color:#87281b;padding-left: 5px;margin: .75rem 0 0;">
+            	<img src="img/router2/shucai_result.png" style="width: 25%;"/>
+            </div>
+	        <div class="list-block media-list" style="margin: 0;">
+	            <ul id="vegetable_type">
+	            	
+	            </ul>
+	        </div>
+	  	</div>
+	  	 
+	  	<div class="content_body" id="content_body_ruzhiping" style="display: none;">
+            <div class="content-block-title" style="text-align: left;color:#87281b;padding-left: 5px;margin: .75rem 0 0;">
+            	<img src="img/router2/ruzhiping_result.png" style="width: 25%;"/>
+            </div>
+	        <div class="list-block media-list" style="margin: 0;">
+	            <ul id="ruzhiping_type">
+	            	
+	            </ul>
+	        </div>
+	  	</div>
+	  	<div class="content_body" id="content_body_roulei" style="display: none;">
+            <div class="content-block-title" style="text-align: left;color:#87281b;padding-left: 5px;margin: .75rem 0 0;">
+            	<img src="img/router2/roulei_result.png" style="width: 25%;"/>
+            </div>
+	        <div class="list-block media-list" style="margin: 0;">
+	            <ul id="roulei_type">
+	            	
+	            </ul>
+	        </div>
+	  	</div>
+	  	<div class="content_body" id="content_body_yinliao" style="display: none;">
+            <div class="content-block-title" style="text-align: left;color:#87281b;padding-left: 5px;margin: .75rem 0 0;">
+            	<img src="img/router2/yinliao_result.png" style="width: 25%;"/>
+            </div>
+	        <div class="list-block media-list" style="margin: 0;">
+	            <ul id="yinliao_type">
+	            	
+	            </ul>
+	        </div>
+	  	</div>
+	  	<div class="content_body" id="content_body_shuiguo" style="display: none;">
+            <div class="content-block-title" style="text-align: left;color:#87281b;padding-left: 5px;margin: .75rem 0 0;">
+            	<img src="img/router2/shuiguo_result.png" style="width: 25%;"/>
+            </div>
+	        <div class="list-block media-list" style="margin: 0;">
+	            <ul id="shuiguo_type">
+	            	
+	            </ul>
+	        </div>
+	  	</div>
+	  	<div class="content_body" id="content_body_xiaochi" style="display: none;">
+            <div class="content-block-title" style="text-align: left;color:#87281b;padding-left: 5px;margin: .75rem 0 0;">
+            	<img src="img/router2/xiaochi_result.png" style="width: 25%;"/>
+            </div>
+	        <div class="list-block media-list" style="margin: 0;">
+	            <ul id="xiaochi_type">
+	            	
+	            </ul>
+	        </div>
+	  	</div>
+	  	<div class="content_body" id="content_body_kuaican" style="display: none;">
+            <div class="content-block-title" style="text-align: left;color:#87281b;padding-left: 5px;margin: .75rem 0 0;">
+            	<img src="img/router2/kuaican_result.png" style="width: 25%;"/>
+            </div>
+	        <div class="list-block media-list" style="margin: 0;">
+	            <ul id="kuaican_type">
+	            	
+	            </ul> 
+	        </div>
+	  	</div>
+	  	<div class="content_body" id="content_body_zhushi" style="display: none;">
+            <div class="content-block-title" style="text-align: left;color:#87281b;padding-left: 5px;margin: .75rem 0 0;">
+            	<img src="img/router2/zhushi_result.png" style="width: 25%;"/>
+            </div>
+	        <div class="list-block media-list" style="margin: 0;">
+	            <ul id="zhushi_type">
+	            	
+	            </ul> 
+	        </div>
+	  	</div>
+	    <div class="total_result clearfix" style="background: #99ccd5;color: #1b6587;height: 32px;line-height: 32px;">
+	     	<div class="list-block media-list" style="margin: 0;float: right;margin-right: 32px;">
+	     			总计:<span id="total_number">0</span>件
+	     	</div>	
+	    </div>
+	    <div class="total_result" style="margin-top: 16px;">
+	     	 <div class="list-block media-list" style="margin: 0;text-align:center;">
+	     	 	<div style="background: #fef8cb;text-align: center;" class="clearfix">
+	     			<a href="javascript:void(0);" style="width: 50%;display: inline-block;background:#2e92a3;color: white;margin-bottom: 5%;margin-left: 5%;" id="result_submit" onclick="total_heat(this)" class="button button-round">提交</a>
+	     		</div>
+	     	 </div>	
+	    </div>	
+	  </div>
+	</div>
+	<!--display-total-heat-->
+	<div class="page" id='router5'>
+	  <header class="bar bar-nav">
+	    <a class="button button-link button-nav pull-left back" href="#router4">
+	      <span class="icon icon-left"></span>
+	                     返回
+	    </a>
+	  </header>
+	  <div id="content5" class="content" style="background: #c3f1f5;">
+	  	 <!-- <div class="content-block-title" style="color: #87281b;padding-left: 5px;"></div>-->
+	  	  <div class="card facebook-card">
+	  	  	<div class="card-header no-border">
+	  	  	 	<div class="facebook-avatar">
+	  	  	 		<img src="img/router/logo.png" width="34" height="34"/>
+	  	  	 	</div>
+	  	  	 	<div class="facebook-name" style="color:#2e92a3">
+	  	  	 		哇！您的<span class="meal_type" style="color: #87281b;">早餐</span>好丰富，吃了这些，快来看看怎样运动消耗掉这些热量吧!
+	  	  	 	</div>
+	  	  	</div>
+	  	  	<div class="card-content" style="text-align: center;position: relative;">
+	  	  		<span style="width: 200px;position: absolute;top: 35%;right: 18%;color: #1a6487;font-size: 60px;">
+	  	  	    	<small id="total_value"></small><small style="font-size: 14px;">Kj</small>
+	  	  	    </span>
+	  	  	    <img src="img/thermometer.png" style="width: 100%;" style="display: inline-block;position: absolute;z-index: 3;"/>
+	  	  	</div>
+	  	  	<div class="card-footer no-border" style="text-align: center;">
+	  	  		<a href="#router6" id="check_result" class="button button-round" style="margin-left: 20%;width:60%;background: #2e92a3;color: white;">查看</a>
+	  	  	</div>
+	  	  </div>
+	  </div>   	
+	</div>
+	<!--display-active-time-->
+	<div class="page" id='router6' style="background: #fff4f1;">
+	  <header class="bar bar-nav">
+	    <a class="button button-link button-nav pull-left back" href="#router5">
+	      <span class="icon icon-left"></span>
+	                     返回
+	    </a>
+	  </header>
+	  <div class="content" id="content6">
+		  <div class="card">
+		  	<div class="card-content">
+		  		<div class="list-block" style="border-bottom: 1px solid #B5B5B5;">
+		  			<ul>
+		  				<li>
+		  					<a href="#router7" class="item-link item-content" style="color:#87281b">
+		  						<div class="item-media" style="font-size: 12px;width: 170px;">
+		  							运动项目
+		  						</div>
+		  						<div class="item-inner clearfix" style="background-image: none;font-size: 12px;text-align: left;">
+		  							<span class="active_title" style="float: right;padding-right: .7rem;">运动时长</span>
+		  						</div>
+		  					</a>
+		  				</li>
+		  			</ul>
+		  		</div>
+		  		<div class="list-block" style="border-bottom: 1px solid #B5B5B5;">
+		  			<ul id="active_time" style="color: #1b6587;">
+		  				
+		  			</ul>
+		  		</div>
+		  	</div>
+		  </div>
+		</div>  	
+	</div>
+	<!--weight-list-->
+	<div class="popover popover-links">
+		<div class="popover-angle on-bottom"></div>
+		<div class="popover-inner">
+			<div class="list-block" style="max-height: 300px;">
+				<ul>
+					<li>
+					  <a href="#" class="list-button item-link" style="color: #87281b;">30</a>	
+					</li>
+					<li>
+					  <a href="#" class="list-button item-link" style="color: #87281b;">35</a>	
+					</li>
+					<li>
+					  <a href="#" class="list-button item-link" style="color: #87281b;">40</a>	
+					</li>
+					<li>
+					  <a href="#" class="list-button item-link" style="color: #87281b;">45</a>	
+					</li>
+					<li>
+					  <a href="#" class="list-button item-link" style="color: #87281b;">50</a>	
+					</li>
+					<li>
+					  <a href="#" class="list-button item-link" style="color: #87281b;">55</a>	
+					</li>
+					<li>
+					  <a href="#" class="list-button item-link" style="color: #87281b;">60</a>	
+					</li>
+					<li>
+					  <a href="#" class="list-button item-link" style="color: #87281b;">65</a>	
+					</li>
+					<li>
+					  <a href="#" class="list-button item-link" style="color: #87281b;">70</a>	
+					</li>
+					<li>
+					  <a href="#" class="list-button item-link" style="color: #87281b;">75</a>	
+					</li>
+					<li>
+					  <a href="#" class="list-button item-link" style="color: #87281b;">80</a>	
+					</li>
+					<li>
+					  <a href="#" class="list-button item-link" style="color: #87281b;">85</a>	
+					</li>
+					<li>
+					  <a href="#" class="list-button item-link" style="color: #87281b;">90</a>	
+					</li>
+					<li>
+					  <a href="#" class="list-button item-link" style="color: #87281b;">95</a>	
+					</li>
+					<li>
+					  <a href="#" class="list-button item-link" style="color: #87281b;">100</a>	
+					</li>
+					<li>
+					  <a href="#" class="list-button item-link" style="color: #87281b;">105</a>	
+					</li>
+					<li>
+					  <a href="#" class="list-button item-link" style="color: #87281b;">110</a>	
+					</li>
+					<li>
+					  <a href="#" class="list-button item-link" style="color: #87281b;">115</a>	
+					</li>
+					<li>
+					  <a href="#" class="list-button item-link" style="color: #87281b;">120</a>	
+					</li>
+				</ul>
+			</div>	
+		</div>
+	</div> 
+	
+    <script src="js/jquery-2.1.0.js"></script>
+	<script src="js/light7.js"></script>
+	<script src="js/data.js"></script>
+	<script src="js/app.js"></script>
+	<script type="text/javascript">
+	    /*个人体重*/
+		var weight;
+		/*食物类型*/
+		var food_type;
+		
+		$(document).ready(function(){
+	        /*router*/
+	        (function(){
+	        	/*所选用餐类型*/
+	            var meal_type_id;
+	        	/*获取用餐类型*/
+		       	$(".meal li").each(function(){
+			 		$(this).bind('click',function(){
+			 		   meal_type_change(Number(this.id));
+			 		   meal_type_id=this.id;
+			 		});
+			 	});
+			 	/*获取个人体重*/
+			 	$(".popover ul li a").each(function(){
+		           $(this).bind('click',function(){
+		           	   weight=Number(this.innerHTML);
+		           	   var person_weight=weight+"Kg";
+		           	   $(".open-popover").html(person_weight);
+		               $(".popover-links").css('display','none');
+		               $(".modal-overlay").remove();  
+		           });
+			 	});
+		        /*判断是否选好餐类和体重*/
+		        $("#check").bind('click',function(){
+			        if((null==meal_type_id)||(null==weight)){
+			            alert("请选好体重和用餐类别?");
+			        }
+		            else{
+		              /*进行在页面导航栏上显示所选餐类*/
+			    	  switch(Number(meal_type_id)){
+			    		case 1:
+			    		    $(".page .wrap .choosed").find("img").attr("src","img/router/breakfast_after.png");
+			        		break;
+			        	case 2:
+			        		 $(".page .wrap .choosed").find("img").attr("src","img/router/lunch_after.png");
+			        		break;
+			    		case 3:
+			        		 $(".page .wrap .choosed").find("img").attr("src","img/router/dinner_after.png");
+			        		break;
+			    		case 4:
+			        		 $(".page .wrap .choosed").find("img").attr("src","img/router/add_food_after.png");
+			        		break;
+			        	default:
+			        		break;	
+			    	  }
+			    	  /*跳转至router2*/
+		              $("#check").attr("href","#router2");
+		            }	
+		        }); 
+	        })(jQuery);
+		 	  
+		 	/*router2*/
+	        (function(){
+	            $(".content-block").find("span").each(function(){
+//	            	$(this).mousedown(function(){
+//	            		alert($(this).attr("dataType"));
+//	            	});
+	                $(this).click(function(){
+	                	var status=$(this).attr("dataType");
+	            		selected_status(status);
+	                	/*食物类型选中状态*/
+	                	/*设置选餐后的状态*/
+	                	$(".page .wrap .meal_result").find("img").attr("src","img/choosed_result_after.png");
+	                	/*获取选中食物类型*/
+	                	food_type=$(this).find("img").attr("food_type");
+	                	/*获取选中食物类型序号*/
+	                	var dataType = parseInt($(this).attr("dataType"));
+		        		/*清除所有a标签的active类*/
+		        		$("#content3 .buttons-tab a").removeClass("active");
+		        		/*选中标签中添加active类*/
+		        		$("#content3 .buttons-tab a").eq(dataType).addClass("active");
+ 		        		//设置
+		        		//$("#content3 #food_title").html(getDataByType(dataType));
+                        /*渲染选中食物列表*/ 
+		        		getFoodAndShow(dataType);
+		        		/*跳转至router3*/
+		        		$(this).find("a").attr("href","#router3");	
+	                });
+	          });
+	          
+	        })(jQuery);
+	         
+	        /*router3*/
+	        (function(){
+	            $("#content3 .buttons-tab a").each(function(){
+		           $(this).click(function(){
+   	                    /*获取选中食物类型*/
+	                    food_type=$(this).html();
+	                    /*获取选中食物类型*/
+		            	var dataType = parseInt($(this).attr("dataType"));
+		        		/*清除所有a标签的active类*/
+		        		$("#content3 .buttons-tab a").removeClass("active");
+		        		/*选中标签中添加active类*/
+		        		$("#content3 .buttons-tab a").eq(dataType).addClass("active");
+		        		//设置产品名称
+		        		//$("#content3 #food_title").html(getDataByType(dataType));
+		        		/*渲染选中食物类型列表*/
+		        		getFoodAndShow(dataType);
+		           });
+	            });
+		        $("#choosed").click(function(){
+		        	/*渲染餐盘食物*/
+		        	getaComfirm_foodAndShow();
+		            /*设置所选食物总数*/
+		        	$("#total_number").html($("#content4 .item").length);
+		        	/*跳转至餐盘*/
+		        	$("#choosed a").attr("href","#router4");
+		      	});
+	        })(jQuery);
+	
+	        /*router4*/
+	        (function(){
+			   	/*计算能量总值*/
+			    $("#result_submit").click(function(){
+			    	food_plate_confirm();
+			    	$(this).attr("href","#router5");
+			    });
+		    })(jQuery);
+	       
+	       /*router5*/
+		    (function(){
+		   	   /*计算食物能量数据消耗时间*/
+		   	   $("#content5 #check_result").click(function(){
+		   	   	   getActive_Time();
+		   	   	   $(this).attr("href","#router6");
+		   	   });
+		   })(jQuery);
+		   
+		   /**
+			* 依据食物类型获取食物数据列表，并渲染显示食物列表
+			* @param {Object} type	食物类型(参考data.js)
+			*/
+			function getFoodAndShow(type){
+			  	/*获取食品数据列表*/
+			  	var dataArr = getDataByType(type);
+			  	/*渲染食品列表*/
+			  	var html = "";
+			  	if(!!dataArr){
+			  		var count = dataArr.length;
+			  		for(var i = 0; i<count; i++){
+			  			var prod = dataArr[i];
+			  			var selectClass = "item_normal";
+			  			var selectTxt = "请选择";
+			  			var selectCount = prod.value;
+			  			var selectFood = get_food(prod.name);
+			  			if(!!selectFood){
+			  				selectCount = selectFood.num;
+			  				selectClass = "item_seleted";
+			  				selectTxt = "取消选择";
+			  			}
+			  			html = html +
+			  					"<li>"
+			  		                +"<div class='item-content' style='background: white;padding-left:.5em'>"
+			          		          +"<div class='item-media'>"
+			          		            +"<img  src='"+"img/"+prod.src+"' style='width: 2rem;'/>"
+			          		            +"<span style='width: 1rem;display:none;'>"+prod.heat+"</span>"
+			          		          +"</div>"
+									      +"<div class='item-inner'  style='background-image: none; font-size:10px;'>"
+										      +"<div class='item-title-row' style='height:30px;line-height: 30px;text-align:left;color:#87281b;font-weight:bold;'>"
+											      +"<div class='item-title name3' style='width:120px;'>"+prod.name+"</div>"
+											      +"<div class='item-title'>数量</div>"
+											      +"<div class='item-title minus3'  onclick='food_minus(this)'><i class='icon iconfont'>&#xe729;</i></div>"
+											      +"<div class='item-title number3'>"+selectCount+"</div>"
+											      +"<div class='item-title plus3'  onclick='food_plus(this)'><i class='icon iconfont'>&#xe727;</i></div>"
+			//											      +"<div id='handel3' class='item-title handle3 alert-text "+selectClass+"' style='border-radius: 6px;' onclick='food_confirm(this)'>"+selectTxt+"</div>"
+											      +"<div class='item-title handle3 alert-text "+selectClass+"' style='border-radius: 6px;width:50px;text-align:center;' onclick='food_confirm(this)'>"+selectTxt+"</div>"
+										      +"</div>"
+									      +"</div>"
+					      	      +"</div>"
+					          +"</li>";
+			  		}
+			  	}
+			  	$("#food_category").html(html); 
+			}
+			/**
+			* 渲染显示餐盘食物列表
+			*/
+			function getaComfirm_foodAndShow(){
+			  	/*获取餐盘中食品列表*/
+			  	var dataArr=get_aComfirm_food();
+			  	/*清空餐盘*/
+			  	var html = "";
+			  	$("#vegetable_type").empty();
+			  	$("#ruzhiping_type").empty();
+			  	$("#roulei_type").empty();
+			  	$("#yinliao_type").empty();
+			  	$("#shuiguo_type").empty();
+			  	$("#xiaochi_type").empty();
+			  	$("#zhushi_type").empty();
+			  	$("#kuaican_type").empty();
+			  	/*渲染显示餐盘食品列表*/
+			  	if(!!dataArr){
+			  		var count = dataArr.length;
+			  		for(var i = 0; i<count; i++){
+			  			var prod = dataArr[i];
+				      		html = html 
+						        +"<li class='item'>"
+					                +"<a href='javascript:void(0);' class='item-link item-content'>"
+					      		          +"<div class='item-media'>"
+					      		            +"<img  src='"+prod.src+"' style='width: 2rem;'/>"
+					      		            +"<span  style='width: 1rem;display:none;'>"+prod.heat+"</span>"
+					      		          +"</div>"
+									      +"<div class='item-inner'  style='background-image: none;font-size:10px;'>"
+										      +"<div class='item-title-row' style='line-height: 40px;text-align:left;color:#87281b;font-weight:bold;'>"
+											      +"<div class='item-title name3' style='width:120px;'>"+prod.name+"</div>"
+											      +"<div class='item-title'>数量</div>"
+											      +"<div class='item-title minus3'  onclick='final_food_minus(this)'><i class='icon iconfont'>&#xe729;</i></div>"
+											      +"<div class='item-title number3'>"+prod.num+"</div>"
+											      +"<div class='item-title plus3'  onclick='final_food_plus(this)'><i class='icon iconfont'>&#xe727;</i></div>"
+											      +"<div class='item-title handle3 alert-text'  onclick='food_plate_confirm(this)'><i class='icon iconfont'>&#xe725;</i></div>"
+										      +"</div>"
+									      +"</div>"
+									 +"</a>"      
+					        +"</li>";
+			            switch (prod.type){
+			        		case "蔬菜":
+			        		    var display=$("#content_body_vegetable").css("display");
+			                	if("block"==display){
+			                		$("#vegetable_type").append(html);
+			                		html="";//清空内容
+			                	}
+			                	else{
+			                	    $("#content_body_vegetable").css("display","block");
+//			                	    $("#content_body_vegetable").find(".content-block-title").html(prod.type);
+			                	    $("#vegetable_type").append(html);
+			                	    html="";
+			                	}
+			        			break;
+			        		case "乳制品":
+			        		    var display=$("#content_body_ruzhiping").css("display");
+			                	if("block"==display){
+			                		$("#ruzhiping_type").append(html);
+			                		html="";
+			                	}
+			                	else{
+			                	    $("#content_body_ruzhiping").css("display","block");
+//			                	    $("#content_body_ruzhiping").find(".content-block-title").html(prod.type);
+			                	    $("#ruzhiping_type").append(html);
+			                	    html="";
+			                	}
+			        			break;
+			        		case "肉类":
+			        		    var display=$("#content_body_roulei").css("display");
+			                	if("block"==display){
+			                		$("#roulei_type").append(html);
+			                		html="";
+			                	}
+			                	else{
+			                	    $("#content_body_roulei").css("display","block");
+//			                	    $("#content_body_roulei").find(".content-block-title").html(prod.type);	
+			                	    $("#roulei_type").append(html);
+			                	    html="";
+			                	}
+			        			break;
+			        		case "饮料":
+			        		    var display=$("#content_body_yinliao").css("display");
+			                	if("block"==display){
+			                		$("#yinliao_type").append(html);
+			                		html="";
+			                	}
+			                	else{
+			                	    $("#content_body_yinliao").css("display","block");
+//			                	    $("#content_body_yinliao").find(".content-block-title").html(prod.type);	
+			                	    $("#yinliao_type").append(html);
+			                	    html="";
+			                	}
+			        			break;
+			        		case "水果":
+			        		    var display=$("#content_body_shuiguo").css("display");
+			                	if("block"==display){
+			                		$("#shuiguo_type").append(html);
+			                		html="";
+			                	}
+			                	else{
+			                	    $("#content_body_shuiguo").css("display","block");
+//			                	    $("#content_body_shuiguo").find(".content-block-title").html(prod.type);
+			                	    $("#shuiguo_type").append(html);
+			                	    html="";
+			                	}
+			        			break;	
+			    			case "小吃":
+			        		    var display=$("#content_body_xiaochi").css("display");
+			                	if("block"==display){
+			                		$("#xiaochi_type").append(html);
+			                		html="";
+			                	}
+			                	else{
+			                	    $("#content_body_xiaochi").css("display","block");
+//			                	    $("#content_body_xiaochi").find(".content-block-title").html(prod.type);
+			                	    $("#xiaochi_type").append(html);
+			                	    html="";
+			                	}
+			        			break;
+			    			case "快餐":
+			        		    var display=$("#content_body_kuaican").css("display");
+			                	if("block"==display){
+			                		$("#kuaican_type").append(html);
+			                		html="";
+			                	}
+			                	else{
+			                	    $("#content_body_kuaican").css("display","block");
+//			                	    $("#content_body_kuaican").find(".content-block-title").html(prod.type);
+			                	    $("#kuaican_type").append(html);
+			                	    html="";
+			                	}
+			        			break;
+			        		case "主食":
+			        		    var display=$("#content_body_zhushi").css("display");
+			                	if("block"==display){
+			                		$("#zhushi_type").append(html);
+			                		html="";
+			                	}
+			                	else{
+			                	    $("#content_body_zhushi").css("display","block");
+//			                	    $("#content_body_zhushi").find(".content-block-title").html(prod.type);
+			                	    $("#zhushi_type").append(html);
+			                	    html="";
+			                	}
+			        			break;	
+			        	    }
+			  		}
+			  		return;
+			  	}
+			} 
+			/**
+			* 计算各项运动消耗时间，并渲染显示
+			*/
+			function getActive_Time(){
+			  	/*获取运动类型列表*/
+			  	var dataArr=get_dataActive();
+			  	/*获取餐盘食物能力总和*/
+			  	var total_heat=Number($("#total_value").html());
+			  	/*渲染各项运功类型时间列表*/
+			  	var html = "";
+			  	if(!!dataArr){
+			  		var count = dataArr.length;
+			  		for(var i = 0; i<count; i++){
+			  			var prod = dataArr[i];
+			  			var time=total_heat/((prod.value)*(weight));
+			  			var hour = Math.floor(Number(time));
+			            var minute=((time-hour)*60).toFixed(2);  
+			  			html = html +
+			  					"<li>"
+			  		                +"<a href='javascript:void(0);' class='item-link item-content'>"
+			          		          +"<div class='item-media' style='font-size:12px;width:170px;'>"
+			          		             +"<img  src='"+"img/"+prod.src+"'  width='34' height='34'/>"
+			          		            +"<span style='margin-left:5px;font-size:10px'>"+prod.name+"</span>"
+			          		          +"</div>"
+								      +"<div class='item-inner clearfix' style='background-image: none;font-size:10px;padding-right: 2.0rem;'>"
+									      +"<span class='active_title' style='float: right;'>"
+										      +"<span  style='text-align:left;'>"+hour+"</span>时"	
+										      +"<span  style='text-align:left;' >"+minute+"</span>分"
+									      +"</span>"
+								      +"</div>"
+					      	      +"</a>"
+					          +"</li>";
+			  		}
+			  		
+			  	}
+			  	$("#active_time").html(html); 
+			   } 		
+		});
+	</script>
+</body>
+</html>
